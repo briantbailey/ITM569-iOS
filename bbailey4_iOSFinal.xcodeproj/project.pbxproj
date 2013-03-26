@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0644913170203BB008651D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644912170203BB008651D7 /* UIKit.framework */; };
+		C0644915170203BB008651D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644914170203BB008651D7 /* Foundation.framework */; };
+		C0644917170203BB008651D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644916170203BB008651D7 /* CoreGraphics.framework */; };
+		C064491D170203BB008651D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C064491B170203BB008651D7 /* InfoPlist.strings */; };
+		C064491F170203BB008651D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C064491E170203BB008651D7 /* main.m */; };
+		C0644923170203BB008651D7 /* CrimeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0644922170203BB008651D7 /* CrimeAppDelegate.m */; };
+		C0644925170203BB008651D7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C0644924170203BB008651D7 /* Default.png */; };
+		C0644927170203BB008651D7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0644926170203BB008651D7 /* Default@2x.png */; };
+		C0644929170203BB008651D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0644928170203BB008651D7 /* Default-568h@2x.png */; };
+		C064492C170203BB008651D7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C064492A170203BB008651D7 /* MainStoryboard.storyboard */; };
+		C064492F170203BB008651D7 /* CrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C064492E170203BB008651D7 /* CrimeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C064490F170203BB008651D7 /* bbailey4_iOSFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bbailey4_iOSFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0644912170203BB008651D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C0644914170203BB008651D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C0644916170203BB008651D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C064491A170203BB008651D7 /* bbailey4_iOSFinal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bbailey4_iOSFinal-Info.plist"; sourceTree = "<group>"; };
+		C064491C170203BB008651D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C064491E170203BB008651D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0644920170203BB008651D7 /* bbailey4_iOSFinal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bbailey4_iOSFinal-Prefix.pch"; sourceTree = "<group>"; };
+		C0644921170203BB008651D7 /* CrimeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrimeAppDelegate.h; sourceTree = "<group>"; };
+		C0644922170203BB008651D7 /* CrimeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrimeAppDelegate.m; sourceTree = "<group>"; };
+		C0644924170203BB008651D7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C0644926170203BB008651D7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C0644928170203BB008651D7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C064492B170203BB008651D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C064492D170203BB008651D7 /* CrimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrimeViewController.h; sourceTree = "<group>"; };
+		C064492E170203BB008651D7 /* CrimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrimeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C064490C170203BB008651D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0644913170203BB008651D7 /* UIKit.framework in Frameworks */,
+				C0644915170203BB008651D7 /* Foundation.framework in Frameworks */,
+				C0644917170203BB008651D7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0644906170203BB008651D7 = {
+			isa = PBXGroup;
+			children = (
+				C0644918170203BB008651D7 /* bbailey4_iOSFinal */,
+				C0644911170203BB008651D7 /* Frameworks */,
+				C0644910170203BB008651D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0644910170203BB008651D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C064490F170203BB008651D7 /* bbailey4_iOSFinal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0644911170203BB008651D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0644912170203BB008651D7 /* UIKit.framework */,
+				C0644914170203BB008651D7 /* Foundation.framework */,
+				C0644916170203BB008651D7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0644918170203BB008651D7 /* bbailey4_iOSFinal */ = {
+			isa = PBXGroup;
+			children = (
+				C0644921170203BB008651D7 /* CrimeAppDelegate.h */,
+				C0644922170203BB008651D7 /* CrimeAppDelegate.m */,
+				C064492A170203BB008651D7 /* MainStoryboard.storyboard */,
+				C064492D170203BB008651D7 /* CrimeViewController.h */,
+				C064492E170203BB008651D7 /* CrimeViewController.m */,
+				C0644919170203BB008651D7 /* Supporting Files */,
+			);
+			path = bbailey4_iOSFinal;
+			sourceTree = "<group>";
+		};
+		C0644919170203BB008651D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C064491A170203BB008651D7 /* bbailey4_iOSFinal-Info.plist */,
+				C064491B170203BB008651D7 /* InfoPlist.strings */,
+				C064491E170203BB008651D7 /* main.m */,
+				C0644920170203BB008651D7 /* bbailey4_iOSFinal-Prefix.pch */,
+				C0644924170203BB008651D7 /* Default.png */,
+				C0644926170203BB008651D7 /* Default@2x.png */,
+				C0644928170203BB008651D7 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C064490E170203BB008651D7 /* bbailey4_iOSFinal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0644932170203BB008651D7 /* Build configuration list for PBXNativeTarget "bbailey4_iOSFinal" */;
+			buildPhases = (
+				C064490B170203BB008651D7 /* Sources */,
+				C064490C170203BB008651D7 /* Frameworks */,
+				C064490D170203BB008651D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bbailey4_iOSFinal;
+			productName = bbailey4_iOSFinal;
+			productReference = C064490F170203BB008651D7 /* bbailey4_iOSFinal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0644907170203BB008651D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Crime;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Brian Bailey";
+			};
+			buildConfigurationList = C064490A170203BB008651D7 /* Build configuration list for PBXProject "bbailey4_iOSFinal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C0644906170203BB008651D7;
+			productRefGroup = C0644910170203BB008651D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C064490E170203BB008651D7 /* bbailey4_iOSFinal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C064490D170203BB008651D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C064491D170203BB008651D7 /* InfoPlist.strings in Resources */,
+				C0644925170203BB008651D7 /* Default.png in Resources */,
+				C0644927170203BB008651D7 /* Default@2x.png in Resources */,
+				C0644929170203BB008651D7 /* Default-568h@2x.png in Resources */,
+				C064492C170203BB008651D7 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C064490B170203BB008651D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C064491F170203BB008651D7 /* main.m in Sources */,
+				C0644923170203BB008651D7 /* CrimeAppDelegate.m in Sources */,
+				C064492F170203BB008651D7 /* CrimeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C064491B170203BB008651D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C064491C170203BB008651D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C064492A170203BB008651D7 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C064492B170203BB008651D7 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0644930170203BB008651D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C0644931170203BB008651D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0644933170203BB008651D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bbailey4_iOSFinal/bbailey4_iOSFinal-Prefix.pch";
+				INFOPLIST_FILE = "bbailey4_iOSFinal/bbailey4_iOSFinal-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C0644934170203BB008651D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bbailey4_iOSFinal/bbailey4_iOSFinal-Prefix.pch";
+				INFOPLIST_FILE = "bbailey4_iOSFinal/bbailey4_iOSFinal-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C064490A170203BB008651D7 /* Build configuration list for PBXProject "bbailey4_iOSFinal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0644930170203BB008651D7 /* Debug */,
+				C0644931170203BB008651D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0644932170203BB008651D7 /* Build configuration list for PBXNativeTarget "bbailey4_iOSFinal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0644933170203BB008651D7 /* Debug */,
+				C0644934170203BB008651D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0644907170203BB008651D7 /* Project object */;
+}
