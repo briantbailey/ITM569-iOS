@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0142E631706689D0047AA05 /* CrimeRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C0142E621706689D0047AA05 /* CrimeRecord.m */; };
 		C0644913170203BB008651D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644912170203BB008651D7 /* UIKit.framework */; };
 		C0644915170203BB008651D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644914170203BB008651D7 /* Foundation.framework */; };
 		C0644917170203BB008651D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644916170203BB008651D7 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0142E611706689D0047AA05 /* CrimeRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrimeRecord.h; sourceTree = "<group>"; };
+		C0142E621706689D0047AA05 /* CrimeRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeRecord.m; sourceTree = "<group>"; };
 		C064490F170203BB008651D7 /* bbailey4_iOSFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bbailey4_iOSFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0644912170203BB008651D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C0644914170203BB008651D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +89,8 @@
 				C0644921170203BB008651D7 /* CrimeAppDelegate.h */,
 				C0644922170203BB008651D7 /* CrimeAppDelegate.m */,
 				C064492A170203BB008651D7 /* MainStoryboard.storyboard */,
+				C0142E611706689D0047AA05 /* CrimeRecord.h */,
+				C0142E621706689D0047AA05 /* CrimeRecord.m */,
 				C064492D170203BB008651D7 /* CrimeViewController.h */,
 				C064492E170203BB008651D7 /* CrimeViewController.m */,
 				C0644919170203BB008651D7 /* Supporting Files */,
@@ -177,6 +182,7 @@
 				C064491F170203BB008651D7 /* main.m in Sources */,
 				C0644923170203BB008651D7 /* CrimeAppDelegate.m in Sources */,
 				C064492F170203BB008651D7 /* CrimeViewController.m in Sources */,
+				C0142E631706689D0047AA05 /* CrimeRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +305,7 @@
 				C0644934170203BB008651D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
