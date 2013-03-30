@@ -22,6 +22,7 @@
 		C0644929170203BB008651D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0644928170203BB008651D7 /* Default-568h@2x.png */; };
 		C064492C170203BB008651D7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C064492A170203BB008651D7 /* MainStoryboard.storyboard */; };
 		C064492F170203BB008651D7 /* CrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C064492E170203BB008651D7 /* CrimeViewController.m */; };
+		C07EDE491706815100EB4D0D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C07EDE481706815100EB4D0D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C064492B170203BB008651D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C064492D170203BB008651D7 /* CrimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrimeViewController.h; sourceTree = "<group>"; };
 		C064492E170203BB008651D7 /* CrimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrimeViewController.m; sourceTree = "<group>"; };
+		C07EDE481706815100EB4D0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		C0644906170203BB008651D7 = {
 			isa = PBXGroup;
 			children = (
+				C07EDE481706815100EB4D0D /* README.md */,
 				C0644918170203BB008651D7 /* bbailey4_iOSFinal */,
 				C0644911170203BB008651D7 /* Frameworks */,
 				C0644910170203BB008651D7 /* Products */,
@@ -184,6 +187,7 @@
 				C0644927170203BB008651D7 /* Default@2x.png in Resources */,
 				C0644929170203BB008651D7 /* Default-568h@2x.png in Resources */,
 				C064492C170203BB008651D7 /* MainStoryboard.storyboard in Resources */,
+				C07EDE491706815100EB4D0D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
