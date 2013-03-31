@@ -38,16 +38,34 @@
                                     <action selector="showNewSubview:" destination="2" eventType="touchUpInside" id="deA-Rm-dU8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoG-q4-RQL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsx-UM-hJ2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IdG-L4-tEw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="78" id="IVl-8w-gH2"/>
-                            <constraint firstItem="IdG-L4-tEw" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="LY1-O1-pzh"/>
+                            <constraint firstItem="Hsx-UM-hJ2" firstAttribute="top" secondItem="XoG-q4-RQL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4Vd-Xn-0Yr"/>
+                            <constraint firstItem="Hsx-UM-hJ2" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Jq6-PP-pbq"/>
                             <constraint firstItem="IdG-L4-tEw" firstAttribute="centerX" secondItem="rcK-bb-si9" secondAttribute="centerX" type="default" id="PEy-1U-3fC"/>
+                            <constraint firstItem="Hsx-UM-hJ2" firstAttribute="centerX" secondItem="IdG-L4-tEw" secondAttribute="centerX" type="default" id="SN7-vb-b70"/>
                             <constraint firstItem="rcK-bb-si9" firstAttribute="top" secondItem="3" secondAttribute="top" constant="155" id="X4T-6M-V8B"/>
+                            <constraint firstItem="IdG-L4-tEw" firstAttribute="top" secondItem="Hsx-UM-hJ2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YgF-N7-V9y"/>
+                            <constraint firstItem="Hsx-UM-hJ2" firstAttribute="leading" secondItem="XoG-q4-RQL" secondAttribute="leading" type="default" id="sZS-95-66W"/>
+                            <constraint firstItem="XoG-q4-RQL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="x7A-vU-658"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sbi-lW-zcy"/>
+                    <connections>
+                        <outlet property="latitudeLabel" destination="XoG-q4-RQL" id="vOf-eY-9uX"/>
+                        <outlet property="longitudeLabel" destination="Hsx-UM-hJ2" id="JdO-xb-1Jk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>

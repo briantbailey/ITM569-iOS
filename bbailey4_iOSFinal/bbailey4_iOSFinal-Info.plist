@@ -30,6 +30,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLo</key>
+	<string></string>
+	<key>NSLocationUsageDescription</key>
+	<string>Use your GPS to locate crime records near you.</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

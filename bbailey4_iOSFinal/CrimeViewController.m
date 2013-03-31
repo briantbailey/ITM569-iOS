@@ -12,14 +12,20 @@
 @interface CrimeViewController ()
 
 @property (strong, nonatomic) UIView *distanceView;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
 @implementation CrimeViewController
 
+@synthesize locationManager = _locationManager;
+
 @synthesize pickerData = _pickerData;
 @synthesize pickerView = _pickerView;
 @synthesize distanceView = _distanceView;
+
+@synthesize latitudeLabel = _latitudeLabel;
+@synthesize longitudeLabel = _longitudeLabel;
 
 - (NSArray *) pickerData
 {
@@ -27,6 +33,17 @@
         _pickerData = [[NSArray alloc] initWithObjects:@"one", @"two", @"three", nil];
     }
     return _pickerData;
+}
+
+- (CLLocationManager *) locationManager
+{
+    if (_locationManager == nil) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        _locationManager.distanceFilter = 10;
+    }
+    return _locationManager;
 }
 
 - (void)viewDidLoad
@@ -50,6 +67,30 @@
     [self.distanceView addSubview:self.pickerView];
     
     [self.view addSubview: self.distanceView];
+    
+    if ([CLLocationManager locationServicesEnabled]) {
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if ([CLLocationManager locationServicesEnabled]) {
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.locationManager stopUpdatingLocation];
+    [super viewWillDisappear:animated];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"Location: %f", ((CLLocation *)locations.lastObject).coordinate.latitude);
+    self.latitudeLabel.text = [[NSString alloc] initWithFormat:@"%f", ((CLLocation *)locations.lastObject).coordinate.latitude];
+    self.longitudeLabel.text = [[NSString alloc] initWithFormat:@"%f", ((CLLocation *)locations.lastObject).coordinate.longitude];
 }
 
 - (void) closeDistanceView
