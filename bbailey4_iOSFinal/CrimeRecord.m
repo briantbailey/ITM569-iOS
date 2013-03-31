@@ -30,4 +30,22 @@
 @synthesize longitude = _longitude;
 @synthesize distanceToMyLocation = _distanceToMyLocation;
 
+- (id) init
+{
+    return [self initWithPrimaryDescription:nil
+                andWithSecondaryDescription:nil];
+}
+
+- (id) initWithPrimaryDescription:(NSString *)primaryDescription
+      andWithSecondaryDescription:(NSString *)secondaryDescription
+{
+    self = [super init];
+    if (self) {
+        // init subclass
+        self.primaryDesc = primaryDescription;
+        self.secondaryDesc = secondaryDescription;
+    }
+    return self;
+}
+
 @end

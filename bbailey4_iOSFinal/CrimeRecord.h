@@ -26,4 +26,10 @@
 @property (strong, nonatomic) NSNumber *longitude;
 @property (strong, nonatomic) NSNumber *distanceToMyLocation;
 
+- (id) init;
+
+//Designated Initializer
+- (id) initWithPrimaryDescription:(NSString *)primaryDescription
+      andWithSecondaryDescription:(NSString *)secondaryDescription;
+
 @end

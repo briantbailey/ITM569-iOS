@@ -8,6 +8,7 @@
 
 #import "CrimeListTableViewController.h"
 #import "CrimeRecordDataController.h"
+#import "CrimeRecord.h"
 
 @interface CrimeListTableViewController ()
 
@@ -29,6 +30,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    dispatch_queue_t loadQueue = dispatch_queue_create("edu.iit.bbailey4.bbailey4_iOSFinal.loadData.progress", NULL);
+    dispatch_async(loadQueue, ^{
+        self.dataSource = [[CrimeRecordDataController alloc] init];
+        [self.dataSource loadJSONCrimeData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });//end main queue dispatch
+    });//end loadQueue block dispatch
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,10 +61,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Crime List Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    CrimeRecord *crimeRecordAtIndex = [self.dataSource objectInCrimeRecordListAtIndex:indexPath.row];
+    cell.textLabel.text = crimeRecordAtIndex.primaryDesc;
+    cell.detailTextLabel.text = crimeRecordAtIndex.secondaryDesc;
     
     return cell;
 }
@@ -80,5 +93,9 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+
+
+
 
 @end

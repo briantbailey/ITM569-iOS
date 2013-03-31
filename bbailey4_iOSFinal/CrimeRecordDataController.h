@@ -16,4 +16,6 @@
 - (NSUInteger) countOfCrimeRecordList;
 - (CrimeRecord *) objectInCrimeRecordListAtIndex:(NSUInteger)index;
 
+- (BOOL) loadJSONCrimeData;
+
 @end
