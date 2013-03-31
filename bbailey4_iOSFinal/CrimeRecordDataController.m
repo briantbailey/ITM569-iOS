@@ -68,8 +68,34 @@
         //NSLog([obj objectForKey:@"latitude"]);
         NSString *primaryDesc = [obj objectForKey:@"_primary_decsription"];
         NSString *secondaryDesc = [obj objectForKey:@"_secondary_description"];
+        NSString *block = [obj objectForKey:@"block"];
+        NSString *dateOf = [obj objectForKey:@"date_of_occurrence"];
+        NSString *caseNum = [obj objectForKey:@"case_"];
+        NSString *ward = [obj objectForKey:@"ward"];
+        NSString *beat = [obj objectForKey:@"beat"];
+        NSString *arrest = [obj objectForKey:@"arrest"];
+        NSString *domestic = [obj objectForKey:@"domestic"];
+        NSString *iucr = [obj objectForKey:@"_iucr"];
+        NSString *fbi = [obj objectForKey:@"fbi_cd"];
+        NSString *latitude = [obj objectForKey:@"latitude"];
+        NSString *longitude = [obj objectForKey:@"longitude"];
+        NSString *locationDesc = [obj objectForKey:@"_location_description"];
         
-        CrimeRecord *aCrimeRecord = [[CrimeRecord alloc] initWithPrimaryDescription:primaryDesc andWithSecondaryDescription:secondaryDesc];
+        CrimeRecord *aCrimeRecord = [[CrimeRecord alloc]
+                                     initWithPrimaryDescription:primaryDesc
+                                     andWithSecondaryDescription:secondaryDesc
+                                     andWithBlock:block
+                                     andWithCaseNumber:caseNum
+                                     andWithDateOf:dateOf
+                                     andWithWard:ward
+                                     andWithBeat:beat
+                                     andWithDomestic:([domestic isEqualToString:@"N"]) ? @"NO" : @"YES"
+                                     andWithArrest:([arrest isEqualToString:@"N"]) ? @"NO" : @"YES"
+                                     andWithIucr:iucr
+                                     andWithFbiCd:fbi
+                                     andWithLatitude:latitude
+                                     andWithLongitude:longitude
+                                     andWithLocationDescription:locationDesc];
         
         [self.crimeRecordList addObject:aCrimeRecord];
     }

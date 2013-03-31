@@ -33,17 +33,53 @@
 - (id) init
 {
     return [self initWithPrimaryDescription:nil
-                andWithSecondaryDescription:nil];
+                andWithSecondaryDescription:nil
+                               andWithBlock:nil
+                          andWithCaseNumber:nil
+                              andWithDateOf:nil
+                                andWithWard:nil
+                                andWithBeat:nil
+                            andWithDomestic:nil
+                              andWithArrest:nil
+                                andWithIucr:nil
+                               andWithFbiCd:nil
+                            andWithLatitude:nil
+                           andWithLongitude:nil
+                 andWithLocationDescription:nil];
 }
 
 - (id) initWithPrimaryDescription:(NSString *)primaryDescription
       andWithSecondaryDescription:(NSString *)secondaryDescription
+                     andWithBlock:(NSString *)block
+                andWithCaseNumber:(NSString *)caseNum
+                    andWithDateOf:(NSString *)dateOf
+                      andWithWard:(NSString *)ward
+                      andWithBeat:(NSString *)beat
+                  andWithDomestic:(NSString *)domestic
+                    andWithArrest:(NSString *)arrest
+                      andWithIucr:(NSString *)iucr
+                     andWithFbiCd:(NSString *)fbiCd
+                  andWithLatitude:(NSString *)latitude
+                 andWithLongitude:(NSString *)longitude
+       andWithLocationDescription:(NSString *)locationDescription
 {
     self = [super init];
     if (self) {
         // init subclass
         self.primaryDesc = primaryDescription;
         self.secondaryDesc = secondaryDescription;
+        self.block = block;
+        self.caseNum = caseNum;
+        self.dateOf = dateOf;
+        self.ward = ward;
+        self.beat = beat;
+        self.domestic = domestic;
+        self.arrest = arrest;
+        self.iucr = iucr;
+        self.fbi_cd = fbiCd;
+        self.latitude = latitude;
+        self.longitude = longitude;
+        self.locationDesc = locationDescription;
     }
     return self;
 }

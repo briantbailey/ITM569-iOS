@@ -18,7 +18,20 @@
 @implementation CrimeDetailTableViewController
 
 @synthesize aCrimeRecord = _aCrimeRecord;
-@synthesize primaryDesc = _primaryDesc;
+@synthesize primaryDescLabel = _primaryDesc;
+@synthesize secondaryDescLabel = _secondaryDesc;
+@synthesize blockLabel = _blockLabel;
+@synthesize caseLabel = _caseLabel;
+@synthesize dateLabel = _dateLabel;
+@synthesize wardLabel = _wardLabel;
+@synthesize beatLabel = _beatLabel;
+@synthesize domesticLabel = _domesticLabel;
+@synthesize arrestLabel = _arrestLabel;
+@synthesize fbiLabel = _fbiLabel;
+@synthesize iucrLabel = _iucrLabel;
+@synthesize latitudeLabel = _latitudeLabel;
+@synthesize longitudeLabel = _longitudeLabel;
+@synthesize locDescLabel = _locDescLabel;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,10 +58,30 @@
 - (void)configureView
 {
     if (self.aCrimeRecord) {
-        self.primaryDesc.text = self.aCrimeRecord.primaryDesc;
+        self.primaryDescLabel.text = self.aCrimeRecord.primaryDesc;
+        self.secondaryDescLabel.text = self.aCrimeRecord.secondaryDesc;
+        self.blockLabel.text = self.aCrimeRecord.block;
+        self.caseLabel.text = self.aCrimeRecord.caseNum;
+        self.dateLabel.text = self.aCrimeRecord.dateOf;
+        self.wardLabel.text = self.aCrimeRecord.ward;
+        self.beatLabel.text = self.aCrimeRecord.beat;
+        self.arrestLabel.text = self.aCrimeRecord.arrest;
+        self.domesticLabel.text = self.aCrimeRecord.domestic;
+        self.iucrLabel.text = self.aCrimeRecord.iucr;
+        self.fbiLabel.text = self.aCrimeRecord.fbi_cd;
+        self.latitudeLabel.text = self.aCrimeRecord.latitude;
+        self.longitudeLabel.text = self.aCrimeRecord.longitude;
+        self.locDescLabel.text = self.aCrimeRecord.locationDesc;
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 13) {
+        return 72.0f;
+    }
+    return 44.0f;
+}
 
 
 

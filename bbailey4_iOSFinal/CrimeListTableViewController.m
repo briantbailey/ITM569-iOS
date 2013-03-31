@@ -68,7 +68,7 @@
     // Configure the cell...
     CrimeRecord *crimeRecordAtIndex = [self.dataSource objectInCrimeRecordListAtIndex:indexPath.row];
     cell.textLabel.text = crimeRecordAtIndex.primaryDesc;
-    cell.detailTextLabel.text = crimeRecordAtIndex.secondaryDesc;
+    cell.detailTextLabel.text = crimeRecordAtIndex.block;
     
     return cell;
 }
