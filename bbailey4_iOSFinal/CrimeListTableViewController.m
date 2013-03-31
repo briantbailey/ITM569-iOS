@@ -7,6 +7,7 @@
 //
 
 #import "CrimeListTableViewController.h"
+#import "CrimeDetailTableViewController.h"
 #import "CrimeRecordDataController.h"
 #import "CrimeRecord.h"
 
@@ -95,7 +96,14 @@
 }
 
 
-
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ShowCrimeDetailSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [[segue destinationViewController] setACrimeRecord:[self.dataSource objectInCrimeRecordListAtIndex:indexPath.row]];
+        
+    }
+}
 
 
 @end

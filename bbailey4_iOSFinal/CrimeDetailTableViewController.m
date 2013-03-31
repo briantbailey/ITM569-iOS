@@ -11,6 +11,8 @@
 
 @interface CrimeDetailTableViewController ()
 
+- (void)configureView;
+
 @end
 
 @implementation CrimeDetailTableViewController
@@ -30,12 +32,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureView];
+    [self.tableView setAllowsSelection:NO];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)configureView
+{
+    if (self.aCrimeRecord) {
+        self.primaryDesc.text = self.aCrimeRecord.primaryDesc;
+    }
 }
 
 

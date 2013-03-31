@@ -20,7 +20,7 @@
 - (id) init {
     self = [super init];
     if (self) {
-        //[NSThread sleepForTimeInterval:2.0];
+        //[NSThread sleepForTimeInterval:2.0]; //For simulating network delay
     }
     return self;
 }
