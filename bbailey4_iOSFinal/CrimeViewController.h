@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CrimeViewController : UIViewController
+@interface CrimeViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@property (strong, nonatomic) UIPickerView *pickerView;
+@property (strong, nonatomic) NSArray *pickerData;
 
 @end
