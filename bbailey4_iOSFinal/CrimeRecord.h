@@ -24,7 +24,7 @@
 @property (copy, nonatomic) NSString *fbi_cd;
 @property (copy, nonatomic) NSString *latitude;
 @property (copy, nonatomic) NSString *longitude;
-@property (strong, nonatomic) NSNumber *distanceToMyLocation;
+@property (nonatomic) double distanceToMyLocation;
 
 - (id) init;
 

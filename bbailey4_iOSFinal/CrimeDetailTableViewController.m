@@ -32,6 +32,7 @@
 @synthesize latitudeLabel = _latitudeLabel;
 @synthesize longitudeLabel = _longitudeLabel;
 @synthesize locDescLabel = _locDescLabel;
+@synthesize distanceToLabel = _distanceToLabel;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -72,6 +73,7 @@
         self.latitudeLabel.text = self.aCrimeRecord.latitude;
         self.longitudeLabel.text = self.aCrimeRecord.longitude;
         self.locDescLabel.text = self.aCrimeRecord.locationDesc;
+        self.distanceToLabel.text = [NSString stringWithFormat:@"%.2f Meters", self.aCrimeRecord.distanceToMyLocation];
     }
 }
 
@@ -80,7 +82,10 @@
     if (indexPath.row == 13) {
         return 72.0f;
     }
-    return 44.0f;
+    if (indexPath.row == 0) {
+        return 60.0f;
+    }
+    return 36.0f;
 }
 
 

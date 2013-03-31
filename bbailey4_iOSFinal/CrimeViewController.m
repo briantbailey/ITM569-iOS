@@ -7,6 +7,7 @@
 //
 
 #import "CrimeViewController.h"
+#import "CrimeListTableViewController.h"
 
 @interface CrimeViewController ()
 
@@ -30,8 +31,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ShowCrimeListSegue"]) {
-        //[[segue destinationViewController] nil];
-        
+        CLLocation *myLocation = [[CLLocation alloc] initWithLatitude:41.83128
+                                                            longitude:-87.62697];
+        [[segue destinationViewController] setMyLocation:myLocation];
+        [[segue destinationViewController] setDistanceIndex:3];
+        [[segue destinationViewController] setSearchDate:@"2013-03-10"];
     }
 }
 

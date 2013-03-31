@@ -16,6 +16,9 @@
 @implementation CrimeRecordDataController
 
 @synthesize crimeRecordList = _crimeRecordList;
+@synthesize degreesLatitudeDistanceArray = _degreesLatitudeDistanceArray;
+@synthesize degreesLongitudeDistanceArray = _degreesLongitudeDistanceArray;
+@synthesize distanceArrayInMeters = _distanceArrayInMeters;
 
 - (id) init {
     self = [super init];
@@ -23,6 +26,30 @@
         //[NSThread sleepForTimeInterval:2.0]; //For simulating network delay
     }
     return self;
+}
+
+- (NSArray *) degreesLatitudeDistanceArray
+{
+    if (_degreesLatitudeDistanceArray == nil) {
+        _degreesLatitudeDistanceArray = [[NSArray alloc] initWithObjects:@0.000274, @0.000686, @0.001372, @0.002745, @0.003623, @0.007246, @0.014493, nil];
+    }
+    return _degreesLatitudeDistanceArray;
+}
+
+- (NSArray *) degreesLongitudeDistanceArray
+{
+    if (_degreesLongitudeDistanceArray == nil) {
+        _degreesLongitudeDistanceArray = [[NSArray alloc] initWithObjects:@0.000451, @0.001127, @0.002255, @0.004509, @0.005952, @0.011905, @0.023810, nil];
+    }
+    return _degreesLongitudeDistanceArray;
+}
+
+- (NSArray *) distanceArrayInMeters
+{
+    if (_distanceArrayInMeters == nil) {
+        _distanceArrayInMeters = [[NSArray alloc] initWithObjects:@30.48, @76.2, @152.4, @304.8, @402.336, @804.672, @1609.344, nil];
+    }
+    return _distanceArrayInMeters;
 }
 
 - (NSMutableArray *) crimeRecordList
@@ -33,16 +60,27 @@
     return _crimeRecordList;
 }
 
-- (BOOL) loadJSONCrimeData
+- (BOOL) loadJSONCrimeDataNearLocation:(CLLocation *)location
+                     withDistanceIndex:(NSUInteger)distanceIndex
+          withStringFormatedSearchDate:(NSString *)stringSearchDate
 {
     NSString *serviceURL = @"https://data.cityofchicago.org/resource/x2n5-8w5q.json";
-    NSString *queryString = @"?$where=within_box(location,+42.00,+-88.00,+41.90,+-87.90)+AND+date_of_occurrence%3E='2013-03-10T00:00:00'&$order=date_of_occurrence+DESC";
+    //NSString *queryString = @"?$where=within_box(location,+42.00,+-88.00,+41.90,+-87.90)+AND+date_of_occurrence%3E='2013-03-10T00:00:00'&$order=date_of_occurrence+DESC";
+    
+    //Dynamic Query
+    NSString *queryParam = [NSString stringWithFormat:@"?$where=within_box(location,+%f,+%f,+%f,+%f)+AND+date_of_occurrence%%3E='%@T00:00:00'&$order=date_of_occurrence+DESC",
+                            (location.coordinate.latitude + [[self.degreesLatitudeDistanceArray objectAtIndex:distanceIndex] doubleValue]),
+                            (location.coordinate.longitude - [[self.degreesLongitudeDistanceArray objectAtIndex:distanceIndex] doubleValue]),
+                            (location.coordinate.latitude - [[self.degreesLatitudeDistanceArray objectAtIndex:distanceIndex] doubleValue]),
+                            (location.coordinate.longitude + [[self.degreesLongitudeDistanceArray objectAtIndex:distanceIndex] doubleValue]),
+                            stringSearchDate];
+    //NSLog(@"%@", queryParam);
     
     //Create Request
     NSError *error = nil;
     NSURLResponse *response = nil;
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    NSURL *URL = [NSURL URLWithString:[serviceURL stringByAppendingString:queryString]];
+    NSURL *URL = [NSURL URLWithString:[serviceURL stringByAppendingString:queryParam]];
     [request setHTTPMethod:@"GET"];
     [request setURL:URL];
     [request setTimeoutInterval:30];
@@ -97,7 +135,13 @@
                                      andWithLongitude:longitude
                                      andWithLocationDescription:locationDesc];
         
-        [self.crimeRecordList addObject:aCrimeRecord];
+        double distTo = [location distanceFromLocation:[[CLLocation alloc] initWithLatitude:[aCrimeRecord.latitude doubleValue]
+                                                                  longitude:[aCrimeRecord.longitude doubleValue]]];
+        [aCrimeRecord setDistanceToMyLocation:distTo];
+        
+        if (aCrimeRecord.distanceToMyLocation <= [[self.distanceArrayInMeters objectAtIndex:distanceIndex] doubleValue]) {
+            [self.crimeRecordList addObject:aCrimeRecord];
+        }
     }
     
     return YES;

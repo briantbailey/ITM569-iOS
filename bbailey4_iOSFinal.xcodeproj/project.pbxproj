@@ -23,6 +23,7 @@
 		C064492C170203BB008651D7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C064492A170203BB008651D7 /* MainStoryboard.storyboard */; };
 		C064492F170203BB008651D7 /* CrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C064492E170203BB008651D7 /* CrimeViewController.m */; };
 		C07EDE491706815100EB4D0D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C07EDE481706815100EB4D0D /* README.md */; };
+		C0BE353A1707F7A000C2BAEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BE35391707F7A000C2BAEB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		C064492D170203BB008651D7 /* CrimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrimeViewController.h; sourceTree = "<group>"; };
 		C064492E170203BB008651D7 /* CrimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrimeViewController.m; sourceTree = "<group>"; };
 		C07EDE481706815100EB4D0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C0BE35391707F7A000C2BAEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0BE353A1707F7A000C2BAEB /* CoreLocation.framework in Frameworks */,
 				C0644913170203BB008651D7 /* UIKit.framework in Frameworks */,
 				C0644915170203BB008651D7 /* Foundation.framework in Frameworks */,
 				C0644917170203BB008651D7 /* CoreGraphics.framework in Frameworks */,
@@ -70,6 +73,7 @@
 		C0644906170203BB008651D7 = {
 			isa = PBXGroup;
 			children = (
+				C0BE35391707F7A000C2BAEB /* CoreLocation.framework */,
 				C07EDE481706815100EB4D0D /* README.md */,
 				C0644918170203BB008651D7 /* bbailey4_iOSFinal */,
 				C0644911170203BB008651D7 /* Frameworks */,

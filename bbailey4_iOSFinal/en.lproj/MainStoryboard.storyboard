@@ -405,6 +405,7 @@
                         <outlet property="blockLabel" destination="1mG-gQ-OZp" id="970-lo-uqJ"/>
                         <outlet property="caseLabel" destination="Ujx-AA-m3K" id="Kce-hV-kxb"/>
                         <outlet property="dateLabel" destination="2I4-tB-T58" id="4nl-YJ-JUC"/>
+                        <outlet property="distanceToLabel" destination="4dM-Qd-xY5" id="rWo-A8-n0n"/>
                         <outlet property="domesticLabel" destination="s9w-El-oQ5" id="tNB-WG-RbW"/>
                         <outlet property="fbiLabel" destination="R69-Ap-cun" id="4E7-ol-L6C"/>
                         <outlet property="iucrLabel" destination="yFo-Pu-V6a" id="s9E-da-hTN"/>
@@ -439,36 +440,6 @@
             <point key="canvasLocation" x="278" y="51"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CrimeDetailTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeDetailTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="arrestLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="beatLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="blockLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="caseLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="domesticLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fbiLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="iucrLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locDescLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="primaryDescLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="secondaryDescLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wardLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CrimeListTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeListTableViewController.h"/>
-        </class>
-        <class className="CrimeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

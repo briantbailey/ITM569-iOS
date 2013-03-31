@@ -18,6 +18,9 @@
 @implementation CrimeListTableViewController
 
 @synthesize dataSource = _dataSource;
+@synthesize myLocation = _myLocation;
+@synthesize distanceIndex = _distanceIndex;
+@synthesize searchDate = _searchDate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,11 +38,15 @@
     dispatch_queue_t loadQueue = dispatch_queue_create("edu.iit.bbailey4.bbailey4_iOSFinal.loadData.progress", NULL);
     dispatch_async(loadQueue, ^{
         self.dataSource = [[CrimeRecordDataController alloc] init];
-        [self.dataSource loadJSONCrimeData];
+        [self.dataSource loadJSONCrimeDataNearLocation:self.myLocation
+                                     withDistanceIndex:self.distanceIndex
+                          withStringFormatedSearchDate:self.searchDate];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
         });//end main queue dispatch
     });//end loadQueue block dispatch
+    
+    //NSLog(@"Lat %f, Long %f", self.myLocation.coordinate.latitude, self.myLocation.coordinate.longitude);
 }
 
 - (void)didReceiveMemoryWarning
