@@ -31,10 +31,22 @@
     return self;
 }
 
+//- (CrimeRecordDataController *) dataSource
+//{
+//    if (_dataSource == nil) {
+//        _dataSource = [[CrimeRecordDataController alloc] init];
+//    }
+//    return _dataSource;
+//}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self loadData];
+}
+
+- (void)loadData
+{
     dispatch_queue_t loadQueue = dispatch_queue_create("edu.iit.bbailey4.bbailey4_iOSFinal.loadData.progress", NULL);
     dispatch_async(loadQueue, ^{
         self.dataSource = [[CrimeRecordDataController alloc] init];

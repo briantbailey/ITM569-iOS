@@ -11,6 +11,7 @@
 		C0142E6617066F1D0047AA05 /* CrimeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0142E6517066F1D0047AA05 /* CrimeListTableViewController.m */; };
 		C0142E6F170673060047AA05 /* CrimeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0142E6E170673060047AA05 /* CrimeDetailTableViewController.m */; };
 		C0142E72170675FC0047AA05 /* CrimeRecordDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0142E71170675FC0047AA05 /* CrimeRecordDataController.m */; };
+		C029B2761708C4B100FE4AF0 /* CrimeLaunchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C029B2751708C4B100FE4AF0 /* CrimeLaunchTableViewController.m */; };
 		C0644913170203BB008651D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644912170203BB008651D7 /* UIKit.framework */; };
 		C0644915170203BB008651D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644914170203BB008651D7 /* Foundation.framework */; };
 		C0644917170203BB008651D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0644916170203BB008651D7 /* CoreGraphics.framework */; };
@@ -35,6 +36,8 @@
 		C0142E6E170673060047AA05 /* CrimeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeDetailTableViewController.m; sourceTree = "<group>"; };
 		C0142E70170675FC0047AA05 /* CrimeRecordDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrimeRecordDataController.h; sourceTree = "<group>"; };
 		C0142E71170675FC0047AA05 /* CrimeRecordDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeRecordDataController.m; sourceTree = "<group>"; };
+		C029B2741708C4B100FE4AF0 /* CrimeLaunchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrimeLaunchTableViewController.h; sourceTree = "<group>"; };
+		C029B2751708C4B100FE4AF0 /* CrimeLaunchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeLaunchTableViewController.m; sourceTree = "<group>"; };
 		C064490F170203BB008651D7 /* bbailey4_iOSFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bbailey4_iOSFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0644912170203BB008651D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C0644914170203BB008651D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				C0644919170203BB008651D7 /* Supporting Files */,
 				C0142E6D170673060047AA05 /* CrimeDetailTableViewController.h */,
 				C0142E6E170673060047AA05 /* CrimeDetailTableViewController.m */,
+				C029B2741708C4B100FE4AF0 /* CrimeLaunchTableViewController.h */,
+				C029B2751708C4B100FE4AF0 /* CrimeLaunchTableViewController.m */,
 			);
 			path = bbailey4_iOSFinal;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				C0142E6617066F1D0047AA05 /* CrimeListTableViewController.m in Sources */,
 				C0142E6F170673060047AA05 /* CrimeDetailTableViewController.m in Sources */,
 				C0142E72170675FC0047AA05 /* CrimeRecordDataController.m in Sources */,
+				C029B2761708C4B100FE4AF0 /* CrimeLaunchTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
