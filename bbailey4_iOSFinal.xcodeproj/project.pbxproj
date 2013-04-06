@@ -24,6 +24,7 @@
 		C064492C170203BB008651D7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C064492A170203BB008651D7 /* MainStoryboard.storyboard */; };
 		C064492F170203BB008651D7 /* CrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C064492E170203BB008651D7 /* CrimeViewController.m */; };
 		C07EDE491706815100EB4D0D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C07EDE481706815100EB4D0D /* README.md */; };
+		C09C01261710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09C01251710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m */; };
 		C0BE353A1707F7A000C2BAEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BE35391707F7A000C2BAEB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		C064492D170203BB008651D7 /* CrimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrimeViewController.h; sourceTree = "<group>"; };
 		C064492E170203BB008651D7 /* CrimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrimeViewController.m; sourceTree = "<group>"; };
 		C07EDE481706815100EB4D0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C09C01241710CB4300CAC4A3 /* CrimeDistanceSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrimeDistanceSelectViewController.h; sourceTree = "<group>"; };
+		C09C01251710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeDistanceSelectViewController.m; sourceTree = "<group>"; };
 		C0BE35391707F7A000C2BAEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -108,6 +111,8 @@
 				C0644921170203BB008651D7 /* CrimeAppDelegate.h */,
 				C0644922170203BB008651D7 /* CrimeAppDelegate.m */,
 				C064492A170203BB008651D7 /* MainStoryboard.storyboard */,
+				C09C01241710CB4300CAC4A3 /* CrimeDistanceSelectViewController.h */,
+				C09C01251710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m */,
 				C0142E6417066F1D0047AA05 /* CrimeListTableViewController.h */,
 				C0142E6517066F1D0047AA05 /* CrimeListTableViewController.m */,
 				C0142E70170675FC0047AA05 /* CrimeRecordDataController.h */,
@@ -215,6 +220,7 @@
 				C0142E6F170673060047AA05 /* CrimeDetailTableViewController.m in Sources */,
 				C0142E72170675FC0047AA05 /* CrimeRecordDataController.m in Sources */,
 				C029B2761708C4B100FE4AF0 /* CrimeLaunchTableViewController.m in Sources */,
+				C09C01261710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

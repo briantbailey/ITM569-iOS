@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @end

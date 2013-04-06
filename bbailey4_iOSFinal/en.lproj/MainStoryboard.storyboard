@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="CrimeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdG-L4-tEw">
@@ -68,12 +68,77 @@
             </objects>
             <point key="canvasLocation" x="632" y="408"/>
         </scene>
+        <!--Crime Distance Select View Controller-->
+        <scene sceneID="fpg-B1-jsf">
+            <objects>
+                <viewController id="NM6-Au-2kQ" customClass="CrimeDistanceSelectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rvU-pQ-y8t">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2k-wH-bQP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="sZw-zc-laU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="NM6-Au-2kQ" id="1UM-ju-NxD"/>
+                                    <outlet property="delegate" destination="NM6-Au-2kQ" id="HiU-pF-Z2h"/>
+                                </connections>
+                            </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-nH-YOA">
+                                <items>
+                                    <barButtonItem title="Close" id="OZA-pn-9EM">
+                                        <connections>
+                                            <action selector="didSelectDistance:" destination="NM6-Au-2kQ" id="Fno-TK-Tnd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-yt-Rm0">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Select Search Distance Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF3-ip-km1">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="mF3-ip-km1" firstAttribute="centerY" secondItem="DBt-yt-Rm0" secondAttribute="centerY" type="default" id="dze-4A-V9J"/>
+                                    <constraint firstItem="mF3-ip-km1" firstAttribute="trailing" secondItem="DBt-yt-Rm0" secondAttribute="trailing" type="default" id="iVg-YC-A4E"/>
+                                    <constraint firstItem="mF3-ip-km1" firstAttribute="leading" secondItem="DBt-yt-Rm0" secondAttribute="leading" type="default" id="mEi-Z9-h7E"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490196078433" green="0.14117647058823529" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HcR-nH-YOA" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" type="default" id="6Ru-rd-mYa"/>
+                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="top" secondItem="HcR-nH-YOA" secondAttribute="bottom" type="default" id="IxG-tD-Qx2"/>
+                            <constraint firstItem="J2k-wH-bQP" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="Izw-0Z-x8z"/>
+                            <constraint firstItem="J2k-wH-bQP" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="R0C-SG-HFQ"/>
+                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="Roy-mV-ryV"/>
+                            <constraint firstItem="J2k-wH-bQP" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" constant="91" id="ZNd-2s-Ov8"/>
+                            <constraint firstItem="HcR-nH-YOA" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="l6c-ig-JA1"/>
+                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="luy-Gj-fSH"/>
+                            <constraint firstItem="HcR-nH-YOA" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="qKd-HX-BSc"/>
+                            <constraint firstAttribute="bottom" secondItem="DBt-yt-Rm0" secondAttribute="bottom" constant="368" id="rEt-Z6-qw5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="distancePicker" destination="J2k-wH-bQP" id="SM3-tg-iMD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Gm-KU-HMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="365"/>
+        </scene>
         <!--Crime Launch Table View Controller - Crime Search-->
         <scene sceneID="EBn-hC-ICP">
             <objects>
                 <tableViewController id="lgi-P5-Dka" customClass="CrimeLaunchTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="5hA-lQ-qcQ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Qiu-eg-NWo">
@@ -166,9 +231,10 @@
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Within Distance Of" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nt-qY-pQM">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Distance Radius" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nt-qY-pQM">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="8is-yF-7Na"/>
+                                                        <constraint firstAttribute="width" constant="107" id="tSw-Ia-duD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -192,6 +258,9 @@
                                             <constraint firstItem="uzv-gW-xmM" firstAttribute="centerY" secondItem="2Re-Qv-vZz" secondAttribute="centerY" type="default" id="ffn-Oo-Yxu"/>
                                             <constraint firstItem="3nt-qY-pQM" firstAttribute="top" secondItem="2Re-Qv-vZz" secondAttribute="top" constant="13" id="vUR-Oo-xmk"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="NM6-Au-2kQ" kind="modal" identifier="ShowDistanceSelect" id="ei3-G1-nng"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Tfl-si-YfW">
                                         <rect key="frame" x="0.0" y="301" width="320" height="45"/>
@@ -267,6 +336,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Crime Search" id="Nbu-be-e1a"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="uzv-gW-xmM" id="zXJ-So-QJL"/>
                         <outlet property="latitudeLabel" destination="NsZ-AO-Yaj" id="5el-Vj-gVE"/>
                         <outlet property="longitudeLabel" destination="MND-4H-n8i" id="I0o-9U-d0o"/>
                     </connections>
@@ -280,7 +350,7 @@
             <objects>
                 <tableViewController id="Afw-zL-KhF" customClass="CrimeListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9uq-4V-fyt">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -325,7 +395,7 @@
             <objects>
                 <tableViewController id="BW6-Cr-X9o" customClass="CrimeDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fiE-zt-ivX">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -677,52 +747,9 @@
             <point key="canvasLocation" x="350" y="-252"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CrimeDetailTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeDetailTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="arrestLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="beatLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="blockLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="caseLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="distanceToLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="domesticLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fbiLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="iucrLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locDescLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="primaryDescLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="secondaryDescLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wardLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CrimeLaunchTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeLaunchTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CrimeListTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeListTableViewController.h"/>
-        </class>
-        <class className="CrimeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showNewSubview:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
