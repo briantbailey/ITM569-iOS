@@ -30,6 +30,7 @@
 		C09C012F1711136800CAC4A3 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012B1711136800CAC4A3 /* orangeButton.png */; };
 		C09C01301711136800CAC4A3 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012C1711136800CAC4A3 /* orangeButton@2x.png */; };
 		C09C01311711136800CAC4A3 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012D1711136800CAC4A3 /* orangeButtonHighlight.png */; };
+		C09C0133171118FC00CAC4A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09C0132171118FC00CAC4A3 /* QuartzCore.framework */; };
 		C0BE353A1707F7A000C2BAEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BE35391707F7A000C2BAEB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		C09C012B1711136800CAC4A3 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
 		C09C012C1711136800CAC4A3 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
 		C09C012D1711136800CAC4A3 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
+		C09C0132171118FC00CAC4A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C0BE35391707F7A000C2BAEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C09C0133171118FC00CAC4A3 /* QuartzCore.framework in Frameworks */,
 				C0BE353A1707F7A000C2BAEB /* CoreLocation.framework in Frameworks */,
 				C0644913170203BB008651D7 /* UIKit.framework in Frameworks */,
 				C0644915170203BB008651D7 /* Foundation.framework in Frameworks */,
@@ -90,6 +93,7 @@
 		C0644906170203BB008651D7 = {
 			isa = PBXGroup;
 			children = (
+				C09C0132171118FC00CAC4A3 /* QuartzCore.framework */,
 				C0BE35391707F7A000C2BAEB /* CoreLocation.framework */,
 				C07EDE481706815100EB4D0D /* README.md */,
 				C0644918170203BB008651D7 /* bbailey4_iOSFinal */,

@@ -10,6 +10,7 @@
 #import "CrimeDetailTableViewController.h"
 #import "CrimeRecordDataController.h"
 #import "CrimeRecord.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CrimeListTableViewController ()
 
@@ -47,6 +48,26 @@
 
 - (void)loadData
 {
+    
+    UIView *loadingView = [[UIView alloc] initWithFrame:CGRectMake(((self.view.frame.size.width - 190) / 2), (((self.view.frame.size.height - 80) / 2) - 40), 190, 80)];
+    loadingView.layer.backgroundColor = [UIColor darkGrayColor].CGColor;
+    loadingView.layer.opacity = 0.95;
+    loadingView.layer.cornerRadius = 20.0;
+    
+    UIActivityIndicatorView *spinnerView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [spinnerView startAnimating];
+    [spinnerView setFrame:CGRectMake(16, ((80 - spinnerView.frame.size.height) / 2), spinnerView.frame.size.width, spinnerView.frame.size.height)];
+    [loadingView addSubview:spinnerView];
+    
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 20, 100, 40)];
+    loadingLabel.textColor = [UIColor whiteColor];
+    loadingLabel.backgroundColor = [UIColor clearColor];
+    loadingLabel.font = [UIFont boldSystemFontOfSize:24.0];
+    loadingLabel.text = @"Loading";
+    [loadingView addSubview:loadingLabel];
+    
+    [self.view addSubview:loadingView];
+    
     dispatch_queue_t loadQueue = dispatch_queue_create("edu.iit.bbailey4.bbailey4_iOSFinal.loadData.progress", NULL);
     dispatch_async(loadQueue, ^{
         self.dataSource = [[CrimeRecordDataController alloc] init];
@@ -55,6 +76,9 @@
                           withStringFormatedSearchDate:self.searchDate];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
+            [loadingLabel removeFromSuperview];
+            [spinnerView removeFromSuperview];
+            [loadingView removeFromSuperview];
         });//end main queue dispatch
     });//end loadQueue block dispatch
     
