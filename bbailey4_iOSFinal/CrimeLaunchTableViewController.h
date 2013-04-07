@@ -16,4 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
+@property (weak, nonatomic) IBOutlet UITableViewCell *addressCell;
+
+@property (weak, nonatomic) IBOutlet UITextField *textInputField;
 @end

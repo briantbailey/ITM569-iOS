@@ -30,6 +30,7 @@
 		C09C01301711136800CAC4A3 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012C1711136800CAC4A3 /* orangeButton@2x.png */; };
 		C09C01311711136800CAC4A3 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012D1711136800CAC4A3 /* orangeButtonHighlight.png */; };
 		C09C0133171118FC00CAC4A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09C0132171118FC00CAC4A3 /* QuartzCore.framework */; };
+		C09C013617112F5000CAC4A3 /* CrimeGeoAddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09C013517112F5000CAC4A3 /* CrimeGeoAddressTableViewController.m */; };
 		C0BE353A1707F7A000C2BAEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BE35391707F7A000C2BAEB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		C09C012C1711136800CAC4A3 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
 		C09C012D1711136800CAC4A3 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
 		C09C0132171118FC00CAC4A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C09C013417112F5000CAC4A3 /* CrimeGeoAddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrimeGeoAddressTableViewController.h; sourceTree = "<group>"; };
+		C09C013517112F5000CAC4A3 /* CrimeGeoAddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeGeoAddressTableViewController.m; sourceTree = "<group>"; };
 		C0BE35391707F7A000C2BAEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,8 @@
 				C0142E6E170673060047AA05 /* CrimeDetailTableViewController.m */,
 				C029B2741708C4B100FE4AF0 /* CrimeLaunchTableViewController.h */,
 				C029B2751708C4B100FE4AF0 /* CrimeLaunchTableViewController.m */,
+				C09C013417112F5000CAC4A3 /* CrimeGeoAddressTableViewController.h */,
+				C09C013517112F5000CAC4A3 /* CrimeGeoAddressTableViewController.m */,
 			);
 			path = bbailey4_iOSFinal;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				C029B2761708C4B100FE4AF0 /* CrimeLaunchTableViewController.m in Sources */,
 				C09C01261710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m in Sources */,
 				C09C01291710EF0900CAC4A3 /* CrimeDateSelectViewController.m in Sources */,
+				C09C013617112F5000CAC4A3 /* CrimeGeoAddressTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,14 @@
 #import "CrimeListTableViewController.h"
 #import "CrimeDistanceSelectViewController.h"
 #import "CrimeDateSelectViewController.h"
+#import "CrimeGeoAddressTableViewController.h"
 
-@interface CrimeLaunchTableViewController () <CrimeDistanceSelectViewControllerDelegate, CrimeDateSelectViewControllerDelegate>
+@interface CrimeLaunchTableViewController () <CrimeDistanceSelectViewControllerDelegate, CrimeDateSelectViewControllerDelegate, UITextFieldDelegate>
 
 @property (copy, nonatomic) NSArray *distanceArray;
 @property (copy, nonatomic) NSArray *dateArray;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (copy, nonatomic) NSString *addressString;
 
 @property (nonatomic) NSUInteger selectedDistanceIndex;
 @property (nonatomic) NSUInteger selectedDateIndex;
@@ -28,11 +30,14 @@
 @synthesize longitudeLabel = _longitudeLabel;
 @synthesize distanceLabel = _distanceLabel;
 @synthesize dateLabel = _dateLabel;
+@synthesize addressCell = _addressCell;
+@synthesize textInputField = _textInputField;
 
 @synthesize locationManager = _locationManager;
 @synthesize distanceArray = _distanceArray;
 @synthesize selectedDistanceIndex = _selectedDistanceIndex;
 @synthesize selectedDateIndex = _selectedDateIndex;
+@synthesize addressString = _addressString;
 
 - (NSArray *)distanceArray
 {
@@ -78,6 +83,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.addressCell.backgroundColor = [UIColor clearColor];
+    self.addressCell.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.selectedDistanceIndex = 2;
     self.selectedDateIndex = 1;
@@ -87,6 +94,8 @@
     if ([CLLocationManager locationServicesEnabled]) {
         [self.locationManager startUpdatingLocation];
     }
+    
+    self.textInputField.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -109,6 +118,17 @@
     self.latitudeLabel.text = [[NSString alloc] initWithFormat:@"%f", ((CLLocation *)locations.lastObject).coordinate.latitude];
     self.longitudeLabel.frame = CGRectMake(83, 12, 150, 19);
     self.longitudeLabel.text = [[NSString alloc] initWithFormat:@"%f", ((CLLocation *)locations.lastObject).coordinate.longitude];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.addressString = textField.text;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -215,6 +235,14 @@
         dsvc.dateArray = self.dateArray;
         dsvc.selectedRow = self.selectedDateIndex;
         dsvc.delegate = self;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"ShowGeoAddresses"]) {
+        CrimeGeoAddressTableViewController *cgavc = (CrimeGeoAddressTableViewController *)segue.destinationViewController;
+        //Other Setup
+        cgavc.geoAddressString = self.addressString;
+        cgavc.searchDate = [self getDateStringFromSelectedIndex:self.selectedDateIndex];
+        cgavc.distanceIndex = self.selectedDistanceIndex;
     }
 }
 
