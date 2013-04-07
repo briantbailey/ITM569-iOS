@@ -32,14 +32,6 @@
     return self;
 }
 
-//- (CrimeRecordDataController *) dataSource
-//{
-//    if (_dataSource == nil) {
-//        _dataSource = [[CrimeRecordDataController alloc] init];
-//    }
-//    return _dataSource;
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -81,8 +73,7 @@
             [loadingView removeFromSuperview];
         });//end main queue dispatch
     });//end loadQueue block dispatch
-    
-    //NSLog(@"Lat %f, Long %f", self.myLocation.coordinate.latitude, self.myLocation.coordinate.longitude);
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -144,7 +135,6 @@
     if ([[segue identifier] isEqualToString:@"ShowCrimeDetailSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         [[segue destinationViewController] setACrimeRecord:[self.dataSource objectInCrimeRecordListAtIndex:indexPath.row]];
-        
     }
 }
 
