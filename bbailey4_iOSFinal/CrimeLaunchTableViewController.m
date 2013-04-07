@@ -9,13 +9,16 @@
 #import "CrimeLaunchTableViewController.h"
 #import "CrimeListTableViewController.h"
 #import "CrimeDistanceSelectViewController.h"
+#import "CrimeDateSelectViewController.h"
 
-@interface CrimeLaunchTableViewController () <CrimeDistanceSelectViewControllerDelegate>
+@interface CrimeLaunchTableViewController () <CrimeDistanceSelectViewControllerDelegate, CrimeDateSelectViewControllerDelegate>
 
 @property (copy, nonatomic) NSArray *distanceArray;
+@property (copy, nonatomic) NSArray *dateArray;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
 @property (nonatomic) NSUInteger selectedDistanceIndex;
+@property (nonatomic) NSUInteger selectedDateIndex;
 
 @end
 
@@ -24,10 +27,12 @@
 @synthesize latitudeLabel = _latitudeLabel;
 @synthesize longitudeLabel = _longitudeLabel;
 @synthesize distanceLabel = _distanceLabel;
+@synthesize dateLabel = _dateLabel;
 
 @synthesize locationManager = _locationManager;
 @synthesize distanceArray = _distanceArray;
 @synthesize selectedDistanceIndex = _selectedDistanceIndex;
+@synthesize selectedDateIndex = _selectedDateIndex;
 
 - (NSArray *)distanceArray
 {
@@ -35,6 +40,14 @@
         _distanceArray = [[NSArray alloc] initWithObjects:@"100 Feet", @"250 Feet", @"500 Feet", @"1000 Feet", @"\u00BC Mile", @"\u00bd Mile", @"1 Mile", nil];
     }
     return _distanceArray;
+}
+
+- (NSArray *)dateArray
+{
+    if (_dateArray == nil) {
+        _dateArray = [[NSArray alloc] initWithObjects:@"in Last 2 Weeks", @"in Last Month", @"in Last 2 Months", @"in Last 6 Months", @"in Last Year", nil];
+    }
+    return _dateArray;
 }
 
 - (void)setSelectedDistanceIndex:(NSUInteger)selectedDistanceIndex
@@ -67,7 +80,9 @@
     [super viewDidLoad];
     
     self.selectedDistanceIndex = 2;
+    self.selectedDateIndex = 1;
     self.distanceLabel.text = [self.distanceArray objectAtIndex:self.selectedDistanceIndex];
+    self.dateLabel.text = [self.dateArray objectAtIndex:self.selectedDateIndex];
     
     if ([CLLocationManager locationServicesEnabled]) {
         [self.locationManager startUpdatingLocation];
@@ -109,6 +124,59 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)crimeDateSelectViewController:(CrimeDateSelectViewController *)sender didSelectDateIndex:(NSUInteger)index
+{
+    self.selectedDateIndex = index;
+    self.dateLabel.text = [self.dateArray objectAtIndex:self.selectedDateIndex];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSString *)getDateStringFromSelectedIndex:(NSUInteger)index
+{
+    NSDate *now = [NSDate date];
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *formattedDateString = @"";
+    NSDate *newDate;
+    switch (index) {
+        case 0:
+            [dateComponents setDay:-14];
+            newDate = [cal dateByAddingComponents:dateComponents toDate:now options:0];
+            formattedDateString = [dateFormatter stringFromDate:newDate];
+            break;
+            
+        case 1:
+            [dateComponents setMonth:-1];
+            newDate = [cal dateByAddingComponents:dateComponents toDate:now options:0];
+            formattedDateString = [dateFormatter stringFromDate:newDate];
+            break;
+            
+        case 2:
+            [dateComponents setMonth:-2];
+            newDate = [cal dateByAddingComponents:dateComponents toDate:now options:0];
+            formattedDateString = [dateFormatter stringFromDate:newDate];
+            break;
+            
+        case 3:
+            [dateComponents setMonth:-6];
+            newDate = [cal dateByAddingComponents:dateComponents toDate:now options:0];
+            formattedDateString = [dateFormatter stringFromDate:newDate];
+            break;
+            
+        case 4:
+            [dateComponents setMonth:-12];
+            newDate = [cal dateByAddingComponents:dateComponents toDate:now options:0];
+            formattedDateString = [dateFormatter stringFromDate:newDate];
+            break;
+            
+        default:
+            break;
+    }
+    return formattedDateString;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ShowCrimeListSegue"]) {
@@ -120,7 +188,7 @@
             [[segue destinationViewController] setMyLocation:myLocation];
         }
         [[segue destinationViewController] setDistanceIndex:self.selectedDistanceIndex];
-        [[segue destinationViewController] setSearchDate:@"2013-03-10"];
+        [[segue destinationViewController] setSearchDate:[self getDateStringFromSelectedIndex:self.selectedDateIndex]];
     }
     
     if ([[segue identifier] isEqualToString:@"ShowDistanceSelect"]) {
@@ -128,6 +196,14 @@
         //Other Setup
         dsvc.distanceArray = self.distanceArray;
         dsvc.selectedRow = self.selectedDistanceIndex;
+        dsvc.delegate = self;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"ShowDateSelect"]) {
+        CrimeDateSelectViewController *dsvc = (CrimeDateSelectViewController *)segue.destinationViewController;
+        //Other Setup
+        dsvc.dateArray = self.dateArray;
+        dsvc.selectedRow = self.selectedDateIndex;
         dsvc.delegate = self;
     }
 }

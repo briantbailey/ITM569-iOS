@@ -76,15 +76,6 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2k-wH-bQP">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="sZw-zc-laU"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="NM6-Au-2kQ" id="1UM-ju-NxD"/>
-                                    <outlet property="delegate" destination="NM6-Au-2kQ" id="HiU-pF-Z2h"/>
-                                </connections>
-                            </pickerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-nH-YOA">
                                 <items>
                                     <barButtonItem title="Close" id="OZA-pn-9EM">
@@ -105,24 +96,34 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="52" type="user" id="3io-JY-xrf"/>
                                     <constraint firstItem="mF3-ip-km1" firstAttribute="centerY" secondItem="DBt-yt-Rm0" secondAttribute="centerY" type="default" id="dze-4A-V9J"/>
                                     <constraint firstItem="mF3-ip-km1" firstAttribute="trailing" secondItem="DBt-yt-Rm0" secondAttribute="trailing" type="default" id="iVg-YC-A4E"/>
                                     <constraint firstItem="mF3-ip-km1" firstAttribute="leading" secondItem="DBt-yt-Rm0" secondAttribute="leading" type="default" id="mEi-Z9-h7E"/>
                                 </constraints>
                             </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2k-wH-bQP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="sZw-zc-laU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="NM6-Au-2kQ" id="1UM-ju-NxD"/>
+                                    <outlet property="delegate" destination="NM6-Au-2kQ" id="HiU-pF-Z2h"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.14117647058823529" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="HcR-nH-YOA" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" type="default" id="6Ru-rd-mYa"/>
-                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="top" secondItem="HcR-nH-YOA" secondAttribute="bottom" type="default" id="IxG-tD-Qx2"/>
-                            <constraint firstItem="J2k-wH-bQP" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="Izw-0Z-x8z"/>
-                            <constraint firstItem="J2k-wH-bQP" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="R0C-SG-HFQ"/>
-                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="Roy-mV-ryV"/>
-                            <constraint firstItem="J2k-wH-bQP" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" constant="91" id="ZNd-2s-Ov8"/>
+                            <constraint firstItem="HcR-nH-YOA" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" type="user" id="6Ru-rd-mYa"/>
+                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" constant="44" type="user" id="FNQ-6O-SZO"/>
+                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="JLh-gG-DDe"/>
+                            <constraint firstItem="J2k-wH-bQP" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="Yrf-Lh-2eS"/>
+                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="frd-rt-2ts"/>
                             <constraint firstItem="HcR-nH-YOA" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="l6c-ig-JA1"/>
-                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="luy-Gj-fSH"/>
                             <constraint firstItem="HcR-nH-YOA" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="qKd-HX-BSc"/>
-                            <constraint firstAttribute="bottom" secondItem="DBt-yt-Rm0" secondAttribute="bottom" constant="368" id="rEt-Z6-qw5"/>
+                            <constraint firstItem="J2k-wH-bQP" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" constant="96" id="s3u-Ac-ar4"/>
+                            <constraint firstItem="DBt-yt-Rm0" firstAttribute="top" secondItem="HcR-nH-YOA" secondAttribute="bottom" type="user" id="smh-s7-4sI"/>
+                            <constraint firstItem="J2k-wH-bQP" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="yXr-sU-RDc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -131,7 +132,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gm-KU-HMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="365"/>
+            <point key="canvasLocation" x="1225" y="437"/>
+        </scene>
+        <!--Crime Date Select View Controller-->
+        <scene sceneID="vRy-Db-w8A">
+            <objects>
+                <viewController id="u2g-HF-Ia9" customClass="CrimeDateSelectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFE-PP-8h9">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="Qt9-iE-cgs">
+                                <items>
+                                    <barButtonItem title="Close" id="UlC-yN-XxQ">
+                                        <connections>
+                                            <action selector="didSelectDistance:" destination="u2g-HF-Ia9" id="Gha-nI-9v1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptL-dh-EKt">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Select When Report Was Filed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-hG-FXC">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="g7c-hG-FXC" firstAttribute="trailing" secondItem="ptL-dh-EKt" secondAttribute="trailing" type="default" id="ID4-48-0SV"/>
+                                    <constraint firstItem="g7c-hG-FXC" firstAttribute="top" secondItem="ptL-dh-EKt" secondAttribute="top" constant="14" id="jKy-2R-qCY"/>
+                                    <constraint firstAttribute="height" constant="52" type="user" id="l1u-6H-oxa"/>
+                                    <constraint firstItem="g7c-hG-FXC" firstAttribute="leading" secondItem="ptL-dh-EKt" secondAttribute="leading" type="default" id="wKd-1d-Dmz"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Q4-c2-qrD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Hmg-f2-rvU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="u2g-HF-Ia9" id="7Vl-FA-tRz"/>
+                                    <outlet property="delegate" destination="u2g-HF-Ia9" id="tJG-nD-Ehv"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490196078433" green="0.14117647058823529" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ptL-dh-EKt" firstAttribute="leading" secondItem="WFE-PP-8h9" secondAttribute="leading" type="default" id="3em-qc-C1K"/>
+                            <constraint firstItem="2Q4-c2-qrD" firstAttribute="leading" secondItem="WFE-PP-8h9" secondAttribute="leading" type="default" id="Azu-Yq-hjF"/>
+                            <constraint firstItem="ptL-dh-EKt" firstAttribute="trailing" secondItem="WFE-PP-8h9" secondAttribute="trailing" type="default" id="FD3-8Y-9Ui"/>
+                            <constraint firstItem="ptL-dh-EKt" firstAttribute="top" secondItem="WFE-PP-8h9" secondAttribute="top" constant="44" type="user" id="FXw-bo-P8U"/>
+                            <constraint firstItem="2Q4-c2-qrD" firstAttribute="trailing" secondItem="WFE-PP-8h9" secondAttribute="trailing" type="default" id="Hkk-rc-3rv"/>
+                            <constraint firstItem="Qt9-iE-cgs" firstAttribute="leading" secondItem="WFE-PP-8h9" secondAttribute="leading" type="default" id="IPM-NH-Mzk"/>
+                            <constraint firstItem="Qt9-iE-cgs" firstAttribute="top" secondItem="WFE-PP-8h9" secondAttribute="top" type="user" id="Rg2-se-OTG"/>
+                            <constraint firstItem="ptL-dh-EKt" firstAttribute="top" secondItem="Qt9-iE-cgs" secondAttribute="bottom" type="user" id="XNn-Vk-8sX"/>
+                            <constraint firstItem="Qt9-iE-cgs" firstAttribute="trailing" secondItem="WFE-PP-8h9" secondAttribute="trailing" type="default" id="fiJ-V2-6eL"/>
+                            <constraint firstItem="2Q4-c2-qrD" firstAttribute="top" secondItem="WFE-PP-8h9" secondAttribute="top" constant="96" id="fkH-Cu-JcN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="2Q4-c2-qrD" id="zsk-Fp-W9q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnH-Id-cF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="437"/>
         </scene>
         <!--Crime Launch Table View Controller - Crime Search-->
         <scene sceneID="EBn-hC-ICP">
@@ -243,7 +310,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzv-gW-xmM">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="8Y0-D7-0ya"/>
-                                                        <constraint firstAttribute="width" constant="141" id="vMc-Yl-cht"/>
+                                                        <constraint firstAttribute="width" constant="151" id="ZcK-kR-gjh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -253,9 +320,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="uzv-gW-xmM" firstAttribute="leading" secondItem="3nt-qY-pQM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="P3U-T9-acl"/>
-                                            <constraint firstItem="3nt-qY-pQM" firstAttribute="leading" secondItem="2Re-Qv-vZz" secondAttribute="leading" constant="17" id="ebb-Qg-QLD"/>
+                                            <constraint firstItem="uzv-gW-xmM" firstAttribute="leading" secondItem="3nt-qY-pQM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="H9n-ru-rOs"/>
                                             <constraint firstItem="uzv-gW-xmM" firstAttribute="centerY" secondItem="2Re-Qv-vZz" secondAttribute="centerY" type="default" id="ffn-Oo-Yxu"/>
+                                            <constraint firstItem="3nt-qY-pQM" firstAttribute="leading" secondItem="2Re-Qv-vZz" secondAttribute="leading" constant="11" id="jXI-0Q-nEQ"/>
                                             <constraint firstItem="3nt-qY-pQM" firstAttribute="top" secondItem="2Re-Qv-vZz" secondAttribute="top" constant="13" id="vUR-Oo-xmk"/>
                                         </constraints>
                                         <connections>
@@ -269,9 +336,10 @@
                                             <rect key="frame" x="10" y="0.0" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date Since Report" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-xr-ZOZ">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Report Was Filed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-xr-ZOZ">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="s54-eQ-giU"/>
+                                                        <constraint firstAttribute="width" constant="107" id="xRR-gN-gzG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -280,7 +348,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFD-sF-Ui6">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="5w9-cN-R0H"/>
-                                                        <constraint firstAttribute="width" constant="139" id="mNy-f6-BmV"/>
+                                                        <constraint firstAttribute="width" constant="150" id="jb0-DG-KkM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -290,11 +358,14 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="FFD-sF-Ui6" firstAttribute="leading" secondItem="rcp-xr-ZOZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="AB7-eQ-RVc"/>
                                             <constraint firstItem="FFD-sF-Ui6" firstAttribute="top" secondItem="Tfl-si-YfW" secondAttribute="top" constant="11" id="P2U-xn-Dp6"/>
-                                            <constraint firstItem="rcp-xr-ZOZ" firstAttribute="leading" secondItem="Tfl-si-YfW" secondAttribute="leading" constant="22" id="PHW-hT-Lfy"/>
+                                            <constraint firstItem="rcp-xr-ZOZ" firstAttribute="leading" secondItem="Tfl-si-YfW" secondAttribute="leading" constant="12" id="VnP-aw-qqb"/>
                                             <constraint firstItem="rcp-xr-ZOZ" firstAttribute="centerY" secondItem="Tfl-si-YfW" secondAttribute="centerY" type="default" id="nT4-1E-ayV"/>
-                                            <constraint firstItem="FFD-sF-Ui6" firstAttribute="leading" secondItem="rcp-xr-ZOZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pLI-VY-dPn"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="u2g-HF-Ia9" kind="modal" identifier="ShowDateSelect" id="suO-dW-1xr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -336,6 +407,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Crime Search" id="Nbu-be-e1a"/>
                     <connections>
+                        <outlet property="dateLabel" destination="FFD-sF-Ui6" id="Mji-5V-doi"/>
                         <outlet property="distanceLabel" destination="uzv-gW-xmM" id="zXJ-So-QJL"/>
                         <outlet property="latitudeLabel" destination="NsZ-AO-Yaj" id="5el-Vj-gVE"/>
                         <outlet property="longitudeLabel" destination="MND-4H-n8i" id="I0o-9U-d0o"/>
