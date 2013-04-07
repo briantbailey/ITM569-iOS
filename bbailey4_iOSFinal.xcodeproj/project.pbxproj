@@ -26,6 +26,10 @@
 		C07EDE491706815100EB4D0D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C07EDE481706815100EB4D0D /* README.md */; };
 		C09C01261710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09C01251710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m */; };
 		C09C01291710EF0900CAC4A3 /* CrimeDateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09C01281710EF0900CAC4A3 /* CrimeDateSelectViewController.m */; };
+		C09C012E1711136800CAC4A3 /* orangeButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012A1711136800CAC4A3 /* orangeButtonHighlight@2x.png */; };
+		C09C012F1711136800CAC4A3 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012B1711136800CAC4A3 /* orangeButton.png */; };
+		C09C01301711136800CAC4A3 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012C1711136800CAC4A3 /* orangeButton@2x.png */; };
+		C09C01311711136800CAC4A3 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C09C012D1711136800CAC4A3 /* orangeButtonHighlight.png */; };
 		C0BE353A1707F7A000C2BAEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BE35391707F7A000C2BAEB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +65,10 @@
 		C09C01251710CB4300CAC4A3 /* CrimeDistanceSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeDistanceSelectViewController.m; sourceTree = "<group>"; };
 		C09C01271710EF0900CAC4A3 /* CrimeDateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrimeDateSelectViewController.h; sourceTree = "<group>"; };
 		C09C01281710EF0900CAC4A3 /* CrimeDateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeDateSelectViewController.m; sourceTree = "<group>"; };
+		C09C012A1711136800CAC4A3 /* orangeButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		C09C012B1711136800CAC4A3 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
+		C09C012C1711136800CAC4A3 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
+		C09C012D1711136800CAC4A3 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
 		C0BE35391707F7A000C2BAEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -139,6 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				C064491A170203BB008651D7 /* bbailey4_iOSFinal-Info.plist */,
+				C09C012A1711136800CAC4A3 /* orangeButtonHighlight@2x.png */,
+				C09C012B1711136800CAC4A3 /* orangeButton.png */,
+				C09C012C1711136800CAC4A3 /* orangeButton@2x.png */,
+				C09C012D1711136800CAC4A3 /* orangeButtonHighlight.png */,
 				C064491B170203BB008651D7 /* InfoPlist.strings */,
 				C064491E170203BB008651D7 /* main.m */,
 				C0644920170203BB008651D7 /* bbailey4_iOSFinal-Prefix.pch */,
@@ -207,6 +219,10 @@
 				C0644929170203BB008651D7 /* Default-568h@2x.png in Resources */,
 				C064492C170203BB008651D7 /* MainStoryboard.storyboard in Resources */,
 				C07EDE491706815100EB4D0D /* README.md in Resources */,
+				C09C012E1711136800CAC4A3 /* orangeButtonHighlight@2x.png in Resources */,
+				C09C012F1711136800CAC4A3 /* orangeButton.png in Resources */,
+				C09C01301711136800CAC4A3 /* orangeButton@2x.png in Resources */,
+				C09C01311711136800CAC4A3 /* orangeButtonHighlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

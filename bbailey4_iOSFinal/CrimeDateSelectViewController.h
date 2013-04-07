@@ -14,6 +14,9 @@
 - (void)crimeDateSelectViewController:(CrimeDateSelectViewController *)sender
                    didSelectDateIndex:(NSUInteger)index;
 
+- (void)crimeDateSelectViewController:(CrimeDateSelectViewController *)sender
+                            didCancel:(BOOL)cancel;
+
 @end
 
 @interface CrimeDateSelectViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
@@ -24,4 +27,6 @@
 @property (nonatomic) NSUInteger selectedRow;
 
 @property (weak, nonatomic) id <CrimeDateSelectViewControllerDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UIButton *setDateButton;
 @end

@@ -19,6 +19,7 @@
 
 @synthesize datePicker = _datePicker;
 @synthesize delegate = _delegate;
+@synthesize setDateButton = _setDateButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +35,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.datePicker selectRow:self.selectedRow inComponent:0 animated:NO];
+    UIImage *resizableButton = [[UIImage imageNamed:@"orangeButton.png" ] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *resizableButtonHighlighted = [[UIImage imageNamed:@"orangeButtonHighlight.png" ] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    [self.setDateButton setBackgroundImage:resizableButton forState:UIControlStateNormal];
+    [self.setDateButton setBackgroundImage:resizableButtonHighlighted
+                            forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +50,10 @@
 
 - (IBAction)didSelectDistance:(UIBarButtonItem *)sender {
     [self.delegate crimeDateSelectViewController:self didSelectDateIndex:self.selectedRow];
+}
+
+- (IBAction)didCancel:(UIBarButtonItem *)sender {
+    [self.delegate crimeDateSelectViewController:self didCancel:YES];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

@@ -124,10 +124,20 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)crimeDistanceViewController:(CrimeDistanceSelectViewController *)sender didCancel:(BOOL)cancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)crimeDateSelectViewController:(CrimeDateSelectViewController *)sender didSelectDateIndex:(NSUInteger)index
 {
     self.selectedDateIndex = index;
     self.dateLabel.text = [self.dateArray objectAtIndex:self.selectedDateIndex];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)crimeDateSelectViewController:(CrimeDateSelectViewController *)sender didCancel:(BOOL)cancel
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -191,7 +201,7 @@
         [[segue destinationViewController] setSearchDate:[self getDateStringFromSelectedIndex:self.selectedDateIndex]];
     }
     
-    if ([[segue identifier] isEqualToString:@"ShowDistanceSelect"]) {
+    if ([[segue identifier] isEqualToString:@"ShowDistanceSelect"] || [[segue identifier] isEqualToString:@"AccessoryDistanceSelect"]) {
         CrimeDistanceSelectViewController *dsvc = (CrimeDistanceSelectViewController *)segue.destinationViewController;
         //Other Setup
         dsvc.distanceArray = self.distanceArray;
@@ -199,7 +209,7 @@
         dsvc.delegate = self;
     }
     
-    if ([[segue identifier] isEqualToString:@"ShowDateSelect"]) {
+    if ([[segue identifier] isEqualToString:@"ShowDateSelect"] || [[segue identifier] isEqualToString:@"AccessoryDateSelect"]) {
         CrimeDateSelectViewController *dsvc = (CrimeDateSelectViewController *)segue.destinationViewController;
         //Other Setup
         dsvc.dateArray = self.dateArray;

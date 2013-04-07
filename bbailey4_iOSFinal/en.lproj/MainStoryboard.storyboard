@@ -78,9 +78,9 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-nH-YOA">
                                 <items>
-                                    <barButtonItem title="Close" id="OZA-pn-9EM">
+                                    <barButtonItem title="Cancel" id="OZA-pn-9EM">
                                         <connections>
-                                            <action selector="didSelectDistance:" destination="NM6-Au-2kQ" id="Fno-TK-Tnd"/>
+                                            <action selector="didCancel:" destination="NM6-Au-2kQ" id="j5m-hL-bwy"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -111,13 +111,30 @@
                                     <outlet property="delegate" destination="NM6-Au-2kQ" id="HiU-pF-Z2h"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-Re-Aw1">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <size key="titleShadowOffset" width="-1" height="-1"/>
+                                <state key="normal" title="Set Search Distance Radius">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectDistance:" destination="NM6-Au-2kQ" eventType="touchUpInside" id="dIU-5o-8Cc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.14117647058823529" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HcR-nH-YOA" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" type="user" id="6Ru-rd-mYa"/>
+                            <constraint firstItem="V4X-Re-Aw1" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="F6c-nV-gys"/>
                             <constraint firstItem="DBt-yt-Rm0" firstAttribute="top" secondItem="rvU-pQ-y8t" secondAttribute="top" constant="44" type="user" id="FNQ-6O-SZO"/>
                             <constraint firstItem="DBt-yt-Rm0" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="JLh-gG-DDe"/>
+                            <constraint firstAttribute="trailing" secondItem="V4X-Re-Aw1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ObB-xF-gZ9"/>
                             <constraint firstItem="J2k-wH-bQP" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="Yrf-Lh-2eS"/>
+                            <constraint firstItem="V4X-Re-Aw1" firstAttribute="top" secondItem="J2k-wH-bQP" secondAttribute="bottom" constant="32" type="user" id="Zvq-vV-o5F"/>
                             <constraint firstItem="DBt-yt-Rm0" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="frd-rt-2ts"/>
                             <constraint firstItem="HcR-nH-YOA" firstAttribute="leading" secondItem="rvU-pQ-y8t" secondAttribute="leading" type="default" id="l6c-ig-JA1"/>
                             <constraint firstItem="HcR-nH-YOA" firstAttribute="trailing" secondItem="rvU-pQ-y8t" secondAttribute="trailing" type="default" id="qKd-HX-BSc"/>
@@ -128,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="distancePicker" destination="J2k-wH-bQP" id="SM3-tg-iMD"/>
+                        <outlet property="setSearchButton" destination="V4X-Re-Aw1" id="qxU-5Q-xXD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gm-KU-HMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,9 +162,9 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="Qt9-iE-cgs">
                                 <items>
-                                    <barButtonItem title="Close" id="UlC-yN-XxQ">
+                                    <barButtonItem title="Cancel" id="UlC-yN-XxQ">
                                         <connections>
-                                            <action selector="didSelectDistance:" destination="u2g-HF-Ia9" id="Gha-nI-9v1"/>
+                                            <action selector="didCancel:" destination="u2g-HF-Ia9" id="rmB-Zu-iaS"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -177,6 +195,20 @@
                                     <outlet property="delegate" destination="u2g-HF-Ia9" id="tJG-nD-Ehv"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlt-db-B2n">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <size key="titleShadowOffset" width="-1" height="-1"/>
+                                <state key="normal" title="Set Timeframe Of Report">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectDistance:" destination="u2g-HF-Ia9" eventType="touchUpInside" id="s4Q-1a-4GK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.14117647058823529" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -190,10 +222,14 @@
                             <constraint firstItem="ptL-dh-EKt" firstAttribute="top" secondItem="Qt9-iE-cgs" secondAttribute="bottom" type="user" id="XNn-Vk-8sX"/>
                             <constraint firstItem="Qt9-iE-cgs" firstAttribute="trailing" secondItem="WFE-PP-8h9" secondAttribute="trailing" type="default" id="fiJ-V2-6eL"/>
                             <constraint firstItem="2Q4-c2-qrD" firstAttribute="top" secondItem="WFE-PP-8h9" secondAttribute="top" constant="96" id="fkH-Cu-JcN"/>
+                            <constraint firstItem="Rlt-db-B2n" firstAttribute="top" secondItem="2Q4-c2-qrD" secondAttribute="bottom" constant="32" type="user" id="ijl-MO-ndf"/>
+                            <constraint firstAttribute="trailing" secondItem="Rlt-db-B2n" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lei-qx-toH"/>
+                            <constraint firstItem="Rlt-db-B2n" firstAttribute="leading" secondItem="WFE-PP-8h9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xcM-6V-B5o"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="2Q4-c2-qrD" id="zsk-Fp-W9q"/>
+                        <outlet property="setDateButton" destination="Rlt-db-B2n" id="XLp-vo-RC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnH-Id-cF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,6 +363,7 @@
                                         </constraints>
                                         <connections>
                                             <segue destination="NM6-Au-2kQ" kind="modal" identifier="ShowDistanceSelect" id="ei3-G1-nng"/>
+                                            <segue destination="NM6-Au-2kQ" kind="modal" identifier="AccessoryDistanceSelect" trigger="accessoryAction" id="Hoq-bh-Orp"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Tfl-si-YfW">
@@ -365,6 +402,7 @@
                                         </constraints>
                                         <connections>
                                             <segue destination="u2g-HF-Ia9" kind="modal" identifier="ShowDateSelect" id="suO-dW-1xr"/>
+                                            <segue destination="u2g-HF-Ia9" kind="modal" identifier="AccessoryDateSelect" trigger="accessoryAction" id="tye-sE-XQM"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -819,9 +857,74 @@
             <point key="canvasLocation" x="350" y="-252"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CrimeDateSelectViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeDateSelectViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="setDateButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CrimeDetailTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeDetailTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrestLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="beatLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="blockLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="caseLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="distanceToLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="domesticLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fbiLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="iucrLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="locDescLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="primaryDescLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="secondaryDescLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wardLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CrimeDistanceSelectViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeDistanceSelectViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didCancel:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="didSelectDistance:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="distancePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="setSearchButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CrimeLaunchTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeLaunchTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CrimeListTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeListTableViewController.h"/>
+        </class>
+        <class className="CrimeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CrimeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showNewSubview:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hoq-bh-Orp"/>
+        <segue reference="tye-sE-XQM"/>
+    </inferredMetricsTieBreakers>
 </document>

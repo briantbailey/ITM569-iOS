@@ -15,6 +15,9 @@
 - (void)crimeDistanceViewController:(CrimeDistanceSelectViewController *)sender
              didSelectDistanceIndex:(NSUInteger)index;
 
+- (void)crimeDistanceViewController:(CrimeDistanceSelectViewController *)sender
+                          didCancel:(BOOL)cancel;
+
 @end
 
 @interface CrimeDistanceSelectViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
@@ -25,5 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *distancePicker;
 
 @property (weak, nonatomic) id <CrimeDistanceSelectViewControllerDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UIButton *setSearchButton;
 
 @end

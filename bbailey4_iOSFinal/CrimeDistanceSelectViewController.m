@@ -19,6 +19,7 @@
 
 @synthesize distanceArray = _distanceArray;
 @synthesize selectedRow = _selectedRow;
+@synthesize setSearchButton = _setSearchButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,6 +36,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.distancePicker selectRow:self.selectedRow inComponent:0 animated:NO];
+    UIImage *resizableButton = [[UIImage imageNamed:@"orangeButton.png" ] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *resizableButtonHighlighted = [[UIImage imageNamed:@"orangeButtonHighlight.png" ] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    [self.setSearchButton setBackgroundImage:resizableButton forState:UIControlStateNormal];
+    [self.setSearchButton setBackgroundImage:resizableButtonHighlighted
+                            forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +51,10 @@
 
 - (IBAction)didSelectDistance:(UIBarButtonItem *)sender {
     [self.delegate crimeDistanceViewController:self didSelectDistanceIndex:self.selectedRow];
+}
+
+- (IBAction)didCancel:(UIBarButtonItem *)sender {
+    [self.delegate crimeDistanceViewController:self didCancel:YES];
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
