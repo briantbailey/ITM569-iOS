@@ -41,7 +41,7 @@
 - (void)loadData
 {
     
-    UIView *loadingView = [[UIView alloc] initWithFrame:CGRectMake(((self.view.frame.size.width - 190) / 2), (((self.view.frame.size.height - 80) / 2) - 40), 190, 80)];
+    UIView *loadingView = [[UIView alloc] initWithFrame:CGRectMake(((self.view.frame.size.width - 205) / 2), (((self.view.frame.size.height - 80) / 2) - 40), 205, 80)];
     loadingView.layer.backgroundColor = [UIColor darkGrayColor].CGColor;
     loadingView.layer.opacity = 0.95;
     loadingView.layer.cornerRadius = 20.0;
@@ -51,11 +51,11 @@
     [spinnerView setFrame:CGRectMake(16, ((80 - spinnerView.frame.size.height) / 2), spinnerView.frame.size.width, spinnerView.frame.size.height)];
     [loadingView addSubview:spinnerView];
     
-    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 20, 100, 40)];
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 20, 125, 40)];
     loadingLabel.textColor = [UIColor whiteColor];
     loadingLabel.backgroundColor = [UIColor clearColor];
     loadingLabel.font = [UIFont boldSystemFontOfSize:24.0];
-    loadingLabel.text = @"Loading";
+    loadingLabel.text = @"Loading...";
     [loadingView addSubview:loadingLabel];
     
     [self.view addSubview:loadingView];
