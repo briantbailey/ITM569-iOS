@@ -32,7 +32,7 @@ can select one and it will show you all the details in that report.
 ##iOS Support
 
 The application is targeted to iOS 6.1. I only tesed the application
-in the emulator and not on an actual device. It should work on the 
+in the emulator and not on an actual device. It will run on the 
 3.5" iPhone, 3.5" Retina iPhone, and 4" Retina iPhone.
 
 ####GPS Testing:####
